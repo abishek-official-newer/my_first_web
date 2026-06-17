@@ -41,7 +41,7 @@ server = Flask(__name__)
 def interface():
     def msg_user():
         return f""" 
-        hello this is official home page
+        hello this is official home page our developer (abishek)will make it too intresting and useful within 1 month 
         <br><br>
         <hr><hr>
         <a href="/about_pg">CLICK HERE TO ABOUT OUR WEBSITE </a>  
@@ -59,6 +59,30 @@ def about_pg():
         return f"""
         <h1>still under patching </h1>
         <hr><hr>
+        <h2>You can use this for your "About Our Website" section:
+
+
+---
+
+About Our Website
+
+Welcome to our website!
+
+This website was created with the goal of providing users with a simple, reliable, and user-friendly experience. We are committed to delivering quality content, useful information, and continuous improvements to meet the needs of our visitors.
+
+The owner and developer of this website is Abishek, who is passionate about technology, learning, and web development. This platform reflects his dedication to creating helpful digital solutions and enhancing user experiences.
+
+We believe in professionalism, honesty, and innovation. Our mission is to make information easily accessible while maintaining a secure, efficient, and well-organized environment for all users.
+
+Thank you for visiting our website and being a part of our journey. Your support and feedback help us grow and improve every day.
+
+Owner: Abishek
+Website Founder & Developer
+
+
+---
+
+This version looks professional, disciplined, and suitable for a personal or project website. </h2>
         """ 
 @server.route("/login_pg")
 def login_pg():
