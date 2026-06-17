@@ -1,3 +1,4 @@
+from werkzeug.security import generate_password_hash
 import sqlite3
 from flask import Flask, request, redirect 
 
@@ -106,12 +107,13 @@ def google_site():
          user_name=request.form.get("user_name")
          user_email=request.form.get("user_email")
          user_pass=request.form.get("user_pass")
+         hashed_pass = generate_password_hash(user_pass)
          print("post received ")
       
          conn=sqlite3.connect("users_login_info_google.db")
          cursor=conn.cursor()
          
-         cursor.execute(" INSERT INTO users(user_name,user_email,user_pass) VALUES(?,?,?)",(user_name,user_email,user_pass))                     
+         cursor.execute(" INSERT INTO users(user_name,user_email,user_pass) VALUES(?,?,?)",(user_name,user_email,hashed_pass))                     
          conn.commit()
          conn.close()
          return " saved sucessful "
