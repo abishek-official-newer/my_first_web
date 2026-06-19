@@ -65,13 +65,13 @@ def old_user_login():
         conn.close()
         
 
-    if user:
+        if user:
 
-        return redirect("/user_account")
+            return redirect("/user_account")
 
-    else:
+        else:
 
-        return redirect("/new_user_login")
+            return redirect("/new_user_login")
     return render_template("old_user_login.html")
     
     
