@@ -134,5 +134,9 @@ def final_page():
     return "Account Created Successfully"
 
     
+@authentication_bp.route("/user_account")
+def user_account():
+
+    return "Welcome User"    
     
     
