@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abi Social</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:#e6edf3;
+}
+
+/* Sidebar */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    height:100vh;
+    background:#161b22;
+    border-right:1px solid #30363d;
+    padding:20px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.menu a{
+    color:#e6edf3;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+}
+
+.menu a:hover{
+    background:#21262d;
+}
+
+/* Main */
+
+.main{
+    margin-left:250px;
+}
+
+/* Navbar */
+
+.navbar{
+    height:70px;
+    background:#161b22;
+    border-bottom:1px solid #30363d;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+}
+
+.search{
+    width:300px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#21262d;
+    color:white;
+}
+
+/* Profile Header */
+
+.profile{
+    padding:40px;
+}
+
+.banner{
+    height:250px;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+    border-radius:15px;
+}
+
+.profile-info{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-top:-60px;
+    padding-left:30px;
+}
+
+.avatar{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:5px solid #0d1117;
+}
+
+.user h1{
+    font-size:32px;
+}
+
+.user p{
+    color:#8b949e;
+    margin-top:5px;
+}
+
+/* Stats */
+
+.stats{
+    display:flex;
+    gap:25px;
+    margin-top:20px;
+    padding-left:30px;
+}
+
+.stat{
+    background:#161b22;
+    padding:20px;
+    border-radius:12px;
+    min-width:120px;
+    text-align:center;
+}
+
+/* Buttons */
+
+.actions{
+    padding-left:30px;
+    margin-top:20px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+.follow{
+    background:#2563eb;
+    color:white;
+}
+
+.message{
+    background:#21262d;
+    color:white;
+}
+
+/* Feed */
+
+.feed{
+    padding:30px;
+}
+
+.post{
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.post-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.post-avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+.post-text{
+    color:#c9d1d9;
+    line-height:1.7;
+}
+
+.post-actions{
+    margin-top:15px;
+    color:#8b949e;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+ABI SOCIAL
+</div>
+
+<div class="menu">
+<a href="#">Dashboard</a>
+<a href="#">Profile</a>
+<a href="#">Messages</a>
+<a href="#">Notifications</a>
+<a href="#">Settings</a>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="navbar">
+
+<input
+type="text"
+class="search"
+placeholder="Search">
+
+<div>
+🔔
+</div>
+
+</div>
+
+<div class="profile">
+
+<div class="banner"></div>
+
+<div class="profile-info">
+
+<img
+src="https://via.placeholder.com/130"
+class="avatar">
+
+<div class="user">
+<h1>Abishek</h1>
+<p>Full Stack Developer</p>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h2>142</h2>
+Posts
+</div>
+
+<div class="stat">
+<h2>4.2K</h2>
+Followers
+</div>
+
+<div class="stat">
+<h2>687</h2>
+Following
+</div>
+
+</div>
+
+<div class="actions">
+
+<button class="follow">
+Follow
+</button>
+
+<button class="message">
+Message
+</button>
+
+</div>
+
+</div>
+
+<div class="feed">
+
+<div class="post">
+
+<div class="post-header">
+
+<img
+src="https://via.placeholder.com/45"
+class="post-avatar">
+
+<div>
+<b>Abishek</b><br>
+<small>2 hours ago</small>
+</div>
+
+</div>
+
+<div class="post-text">
+Building my own social media platform using Flask, Neon and JavaScript.
+</div>
+
+<div class="post-actions">
+❤️ 245 Likes • 💬 32 Comments
+</div>
+
+</div>
+
+<div class="post">
+
+<div class="post-header">
+
+<img
+src="https://via.placeholder.com/45"
+class="post-avatar">
+
+<div>
+<b>Abishek</b><br>
+<small>Yesterday</small>
+</div>
+
+</div>
+
+<div class="post-text">
+Learning advanced Flask architecture, Blueprints and APIs.
+</div>
+
+<div class="post-actions">
+❤️ 410 Likes • 💬 61 Comments
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+  </html>
