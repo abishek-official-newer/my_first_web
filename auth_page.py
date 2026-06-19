@@ -38,11 +38,11 @@ def old_user_login():
     
     if request.method=="POST":
         profile_name = request.form["profile_name"]
-        profile_pass = request.form["profile_pass"]
+        profile_pass = request.form["profile_pass"]                         
 
         # search Neon database here
         conn = pg8000.connect(
-    host="ep-calm-boat-atwdggmw-pooler.c-9.us-east-1.aws.neon.tech"
+    host="ep-calm-boat-atwdggmw-pooler.c-9.us-east-1.aws.neon.tech",
     database="neondb",
     user="neondb_owner",
     password="npg_FXjK9qn7owLN",
