@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 
-    <title>welcome to our website</title>
+<title>ABI'S WEBSITE</title>
+
 <style>
 
-body{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
 
-    background:
-    linear-gradient(
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
         -45deg,
         #0f172a,
         #1e3a8a,
@@ -18,45 +28,115 @@ body{
         #2563eb
     );
 
-    background-size:
-    400% 400%;
+    background-size:400% 400%;
 
-    animation:
-    gradientMove
-    12s ease infinite;
-
-    color:white;
-
-    font-family:
-    Segoe UI,
-    sans-serif;
-
-    text-align:center;
-
-    min-height:100vh;
+    animation:gradientMove 12s ease infinite;
 }
 
 @keyframes gradientMove{
 
     0%{
-        background-position:
-        0% 50%;
+        background-position:0% 50%;
     }
 
     50%{
-        background-position:
-        100% 50%;
+        background-position:100% 50%;
     }
 
     100%{
-        background-position:
-        0% 50%;
+        background-position:0% 50%;
     }
+
 }
 
-a{
+.container{
 
-    display:inline-block;
+    width:90%;
+    max-width:900px;
+
+    background:rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:
+    0 10px 40px
+    rgba(0,0,0,0.4);
+
+    animation:fadeIn 1.5s;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+h1{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    animation:glow 3s infinite;
+}
+
+@keyframes glow{
+
+    0%{
+        text-shadow:0 0 10px #38bdf8;
+    }
+
+    50%{
+        text-shadow:
+        0 0 25px #38bdf8;
+    }
+
+    100%{
+        text-shadow:0 0 10px #38bdf8;
+    }
+
+}
+
+.subtitle{
+
+    color:#dbeafe;
+
+    margin-bottom:35px;
+}
+
+.links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.links a{
 
     text-decoration:none;
 
@@ -67,116 +147,101 @@ a{
         255,
         255,
         255,
-        0.15
+        0.12
     );
 
-    padding:
-    12px 25px;
+    padding:15px 25px;
 
-    margin:
-    10px;
+    border-radius:15px;
 
-    border-radius:
-    12px;
+    transition:0.3s;
 
-    transition:
-    0.3s;
+    min-width:220px;
 }
 
-a:hover{
+.links a:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
 
     background:
     rgba(
         255,
         255,
         255,
-        0.3
+        0.25
     );
 
-    transform:
-    translateY(-3px);
-}
-
-h1{
-
-    margin-top:
-    50px;
-
-    font-size:
-    40px;
-}
-
-h2{
-
-    margin-top:
-    30px;
-}
-
-hr{
-
-    width:70%;
-
-    border:
-    1px solid
+    box-shadow:
+    0 0 20px
     rgba(
         255,
         255,
         255,
-        0.2
+        0.3
     );
 }
 
-</style>
-    
+.footer{
 
-    
+    margin-top:40px;
+
+    color:#cbd5e1;
+
+    font-size:14px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <h1>IT IS OUR OFFICIAL PAGE(handler and developer is ABISHEK)</h1>
+<div class="container">
 
-    <hr>
+<h1>ABI WEBSITE</h1>
 
-    <h2>click below to visit our below pages</h2>
-    <hr><hr>
-    <a href="/user_statement">
-    click here to enter our web application 
-    </a>
+<p class="subtitle">
+Official Website • Designed & Developed By Abishek
+</p>
 
-    <br><br>
-    
-    
-    <hr><hr>
-    
-    <br><br><br>
+<div class="links">
 
-    <a href="/about">
-    click here to read About Website
-    </a>
+<a href="/user_statement">
+Launch Application
+</a>
 
-    <br><br>
+<a href="/about">
+ About Website
+</a>
 
-    <a href="/owner">
-        About Owner
-    </a>
+<a href="/owner">
+ About Owner
+</a>
 
-    <br><br>
+<a href="/contact">
+ Contact Us
+</a>
 
-    <a href="/contact">
-        Contact Us
-    </a>
-    <br><br><br>
-    
-    <hr><hr>
-    <a href="/policy">
-    privacy /policy
-    </a>
-    <br><br><br><br><br>
-    <hr>
-    <a href="banned">
-    users interacted with abnormal activitys who were banned(currently 404) 
-    </a>
+<a href="/policy">
+ Privacy Policy
+</a>
+
+<a href="/banned">
+ Banned Users(who interacted with abnormals)
+</a>
+
+</div>
+
+<div class="footer">
+
+Build • Connect • Create
+
+</div>
+
+</div>
+
 </body>
 
 </html>
