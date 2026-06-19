@@ -42,10 +42,10 @@ def old_user_login():
 
         # search Neon database here
         conn = pg8000.connect(
-    host="YOUR_HOST",
+    host="ep-calm-boat-atwdggmw-pooler.c-9.us-east-1.aws.neon.tech"
     database="neondb",
     user="neondb_owner",
-    password="YOUR_PASSWORD",
+    password="npg_FXjK9qn7owLN",
     ssl_context=True
 )
 
