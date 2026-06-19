@@ -5,7 +5,131 @@
 <head>
 
     <title>welcome to our website</title>
+<style>
 
+body{
+
+    background:
+    linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e3a8a,
+        #7c3aed,
+        #2563eb
+    );
+
+    background-size:
+    400% 400%;
+
+    animation:
+    gradientMove
+    12s ease infinite;
+
+    color:white;
+
+    font-family:
+    Segoe UI,
+    sans-serif;
+
+    text-align:center;
+
+    min-height:100vh;
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:
+        0% 50%;
+    }
+
+    50%{
+        background-position:
+        100% 50%;
+    }
+
+    100%{
+        background-position:
+        0% 50%;
+    }
+}
+
+a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:
+    rgba(
+        255,
+        255,
+        255,
+        0.15
+    );
+
+    padding:
+    12px 25px;
+
+    margin:
+    10px;
+
+    border-radius:
+    12px;
+
+    transition:
+    0.3s;
+}
+
+a:hover{
+
+    background:
+    rgba(
+        255,
+        255,
+        255,
+        0.3
+    );
+
+    transform:
+    translateY(-3px);
+}
+
+h1{
+
+    margin-top:
+    50px;
+
+    font-size:
+    40px;
+}
+
+h2{
+
+    margin-top:
+    30px;
+}
+
+hr{
+
+    width:70%;
+
+    border:
+    1px solid
+    rgba(
+        255,
+        255,
+        255,
+        0.2
+    );
+}
+
+</style>
+    
+
+    
 </head>
 
 <body>
