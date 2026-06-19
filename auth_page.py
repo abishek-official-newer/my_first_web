@@ -41,14 +41,37 @@ def old_user_login():
         profile_pass = request.form["profile_pass"]
 
         # search Neon database here
+        conn = pg8000.connect(
+    host="YOUR_HOST",
+    database="neondb",
+    user="neondb_owner",
+    password="YOUR_PASSWORD",
+    ssl_context=True
+)
 
-        if found_user:
+        cursor = conn.cursor()
 
-            return redirect("/user_account")
+        cursor.execute(
+        """
+        SELECT *
+        FROM users
+        WHERE profile_name=%s
+        AND profile_pass=%s
+        """,
+        (profile_name, profile_pass))
 
-        else:
+        user = cursor.fetchone()
 
-            return redirect("/new_user_login")
+        conn.close()
+        
+
+    if user:
+
+        return redirect("/user_account")
+
+    else:
+
+        return redirect("/new_user_login")
     return render_template("old_user_login.html")
     
     
