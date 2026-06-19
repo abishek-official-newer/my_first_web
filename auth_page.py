@@ -137,6 +137,6 @@ def final_page():
 @authentication_bp.route("/user_account")
 def user_account():
 
-    return "Welcome User"    
+    return render_template("temp_profile.html")  
     
     
