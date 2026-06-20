@@ -1,33 +1,211 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
-    <title>you or currently in our web application</title>
-</head>
-<body>
+    <title>these are only for security authentication</title><style>
 
-<h1 contenteditable="true">
-    welcome user your under our security page
-</h1>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Segoe UI,sans-serif;
+    }
 
-<form action="/user_statement" method="POST">
+    body{
+        min-height:100vh;
 
-    <p>you had already an account or not?</p>
+        display:flex;
+        justify-content:center;
+        align-items:center;
 
+        background:linear-gradient(
+            -45deg,
+            #020617,
+            #0f172a,
+            #111827,
+            #1e3a8a
+        );
+
+        background-size:400% 400%;
+        animation:bgmove 15s ease infinite;
+    }
+
+    @keyframes bgmove{
+        0%{background-position:0% 50%;}
+        50%{background-position:100% 50%;}
+        100%{background-position:0% 50%;}
+    }
+
+    .container{
+
+        width:95%;
+        max-width:800px;
+
+        background:rgba(255,255,255,0.08);
+
+        backdrop-filter:blur(20px);
+        -webkit-backdrop-filter:blur(20px);
+
+        border:1px solid rgba(255,255,255,0.1);
+
+        border-radius:30px;
+
+        padding:50px;
+
+        color:white;
+
+        position:relative;
+        overflow:hidden;
+
+        box-shadow:
+        0 15px 40px rgba(0,0,0,0.4);
+
+        transform:scale(1.08);
+
+        margin-top:-120px;
+    }
+
+    .container::before{
+        content:"";
+        position:absolute;
+
+        top:-100%;
+        left:-50%;
+
+        width:50%;
+        height:300%;
+
+        background:linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.08),
+            transparent
+        );
+
+        transform:rotate(25deg);
+
+        animation:shine 8s linear infinite;
+    }
+
+    @keyframes shine{
+        0%{left:-70%;}
+        100%{left:150%;}
+    }
+
+    h1{
+        text-align:center;
+        margin-bottom:30px;
+        font-size:40px;
+        position:relative;
+        z-index:2;
+    }
+
+    p{
+        text-align:center;
+        margin-bottom:25px;
+        font-size:22px;
+        position:relative;
+        z-index:2;
+    }
+
+    .radio-box{
+        margin-bottom:20px;
+        position:relative;
+        z-index:2;
+    }
+
+    label{
+        font-size:20px;
+    }
+
+    input[type="radio"]{
+        transform:scale(1.4);
+        margin-right:10px;
+    }
+
+    .service-btn{
+
+        width:100%;
+
+        padding:16px;
+
+        border:none;
+
+        border-radius:15px;
+
+        background:#10b981;
+
+        color:white;
+
+        font-size:18px;
+
+        cursor:pointer;
+
+        margin-bottom:15px;
+
+        transition:0.3s;
+    }
+
+    .service-btn:hover{
+
+        background:#059669;
+
+        transform:translateY(-3px);
+    }
+
+    .submit-btn{
+
+        width:100%;
+
+        padding:16px;
+
+        border:none;
+
+        border-radius:15px;
+
+        background:#2563eb;
+
+        color:white;
+
+        font-size:18px;
+
+        cursor:pointer;
+
+        transition:0.3s;
+    }
+
+    .submit-btn:hover{
+
+        background:#1d4ed8;
+
+        transform:
+        translateY(-3px)
+        scale(1.02);
+    }
+
+</style>
+
+</head><body><div class="container"><h1>
+    co-operate our follows
+</h1><form action="/user_statement" method="POST"><p>Do you already have an account?</p>
+
+<div class="radio-box">
     <input type="radio" name="answer" value="Yes" required>
     <label>Yes</label>
+</div>
 
-    <br><br>
-
+<div class="radio-box">
     <input type="radio" name="answer" value="No">
     <label>No</label>
+</div>
 
-    <br><br>
-
-    <button type="submit">
-        Submit
+<a href="/customer_service">
+    <button type="button" class="service-btn">
+        Customer Service
     </button>
+</a>
 
-</form>
+<button type="submit" class="submit-btn">
+    Submit
+</button>
 
-</body>
-</html>
+</form></div></body>
+           </html>
