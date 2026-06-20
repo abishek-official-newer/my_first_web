@@ -15,22 +15,30 @@
 }
 
 body{
+
     min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    background:linear-gradient(
+    overflow:hidden;
+
+    background:
+    linear-gradient(
         -45deg,
         #0f172a,
-        #1e3a8a,
-        #7c3aed,
-        #2563eb
+        #111827,
+        #1e293b,
+        #0f172a
     );
 
     background-size:400% 400%;
 
-    animation:gradientMove 12s ease infinite;
+    animation:
+    gradientMove 18s ease infinite;
 }
 
 @keyframes gradientMove{
@@ -52,30 +60,47 @@ body{
 .container{
 
     width:90%;
-    max-width:900px;
 
-    background:rgba(
+    max-width:1000px;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    background:
+    rgba(
         255,
         255,
         255,
-        0.08
+        0.06
     );
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(20px);
 
-    border-radius:25px;
-
-    padding:40px;
-
-    text-align:center;
+    border:
+    1px solid
+    rgba(
+        255,
+        255,
+        255,
+        0.15
+    );
 
     color:white;
 
-    box-shadow:
-    0 10px 40px
-    rgba(0,0,0,0.4);
+    text-align:center;
 
-    animation:fadeIn 1.5s;
+    animation:
+    slideUp 1.2s ease;
+
+    transition:0.4s;
+}
+
+.container:hover{
+
+    transform:
+    translateY(-5px);
+
 }
 
 @keyframes fadeIn{
@@ -94,12 +119,36 @@ body{
 
 h1{
 
-    font-size:42px;
+    font-size:52px;
 
-    margin-bottom:15px;
+    font-weight:700;
 
-    animation:glow 3s infinite;
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
 }
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}    
 
 @keyframes glow{
 
@@ -159,30 +208,40 @@ h1{
     min-width:220px;
 }
 
-.links a:hover{
+.links a{
 
-    transform:
-    translateY(-5px)
-    scale(1.05);
+    text-decoration:none;
+
+    color:white;
 
     background:
     rgba(
         255,
         255,
         255,
-        0.25
+        0.08
     );
 
-    box-shadow:
-    0 0 20px
+    border:
+    1px solid
     rgba(
         255,
         255,
         255,
-        0.3
+        0.1
     );
-}
 
+    padding:18px 28px;
+
+    border-radius:18px;
+
+    min-width:240px;
+
+    transition:0.35s;
+
+    font-weight:600;
+
+}
 .footer{
 
     margin-top:40px;
@@ -226,6 +285,10 @@ Launch Application
 
 <a href="/policy">
  Privacy Policy
+</a>
+
+<a href="/ai_bot">
+  AI Assistant
 </a>
 
 <a href="/banned">
