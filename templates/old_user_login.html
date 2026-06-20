@@ -1,8 +1,226 @@
 <!DOCTYPE html><html>
-<head>
-    <title>Login</title>
-</head>
-<body><h1>Old User Login</h1><form action="/old_user_login" method="POST"><label>Profile Name</label>
+<head><title>Login</title><style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        -45deg,
+        #020617,
+        #0f172a,
+        #111827,
+        #1e3a8a
+    );
+
+    background-size:400% 400%;
+
+    animation:bgmove 15s ease infinite;
+}
+
+@keyframes bgmove{
+
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+
+}
+
+.container{
+
+    width:95%;
+    max-width:700px;
+
+    background:rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(
+        255,
+        255,
+        255,
+        0.1
+    );
+
+    border-radius:30px;
+
+    padding:40px;
+
+    color:white;
+
+    position:relative;
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,0.4);
+}
+
+.container::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+    left:-50%;
+
+    width:50%;
+    height:300%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+    );
+
+    transform:rotate(25deg);
+
+    animation:shine 8s linear infinite;
+}
+
+@keyframes shine{
+
+    0%{left:-70%;}
+    100%{left:150%;}
+
+}
+
+h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:40px;
+
+    position:relative;
+    z-index:2;
+}
+
+label{
+
+    font-size:18px;
+
+    position:relative;
+    z-index:2;
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:8px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    border:1px solid rgba(
+        255,
+        255,
+        255,
+        0.1
+    );
+}
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    margin-top:20px;
+
+    transition:0.3s;
+}
+
+.login-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+}
+
+.bottom-area{
+
+    margin-top:35px;
+}
+
+.service-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#10b981;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.service-btn:hover{
+
+    background:#059669;
+
+    transform:translateY(-3px);
+}
+
+</style></head><body><div class="container"><h2>Login Your Account</h2><form action="/old_user_login" method="POST"><label>Profile Name</label>
 <br>
 
 <input
@@ -20,9 +238,17 @@ type="password"
 name="profile_pass"
 required>
 
-<br><br>
+<button
+type="submit"
+class="login-btn">
+Login
+</button>
 
-<button type="submit">
-    Login
-</button></form></body>
+</form><div class="bottom-area"><a href="/customer_service"><button
+type="button"
+class="service-btn">
+Customer Service
+</button>
+
+</a></div></div></body>
 </html>
