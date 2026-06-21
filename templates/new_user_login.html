@@ -1,29 +1,307 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
+
 <head>
     <title>Create Account</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Segoe UI,sans-serif;
+        }
+
+        body{
+
+            min-height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:linear-gradient(
+                -45deg,
+                #020617,
+                #0f172a,
+                #111827,
+                #1e3a8a
+            );
+
+            background-size:400% 400%;
+            animation:bgmove 15s ease infinite;
+
+            padding:20px;
+        }
+
+        @keyframes bgmove{
+
+            0%{
+                background-position:0% 50%;
+            }
+
+            50%{
+                background-position:100% 50%;
+            }
+
+            100%{
+                background-position:0% 50%;
+            }
+        }
+
+        .container{
+
+            width:95%;
+            max-width:700px;
+        }
+
+        .glass-box{
+
+            background:rgba(
+                255,
+                255,
+                255,
+                0.08
+            );
+
+            backdrop-filter:blur(20px);
+            -webkit-backdrop-filter:blur(20px);
+
+            border:1px solid rgba(
+                255,
+                255,
+                255,
+                0.1
+            );
+
+            border-radius:25px;
+
+            padding:25px;
+
+            margin-bottom:25px;
+
+            color:white;
+
+            box-shadow:
+            0 10px 30px
+            rgba(0,0,0,0.3);
+
+            position:relative;
+            overflow:hidden;
+        }
+
+        .glass-box::before{
+
+            content:"";
+
+            position:absolute;
+
+            top:-100%;
+            left:-50%;
+
+            width:50%;
+            height:300%;
+
+            background:linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.08),
+                transparent
+            );
+
+            transform:rotate(25deg);
+
+            animation:shine 8s linear infinite;
+        }
+
+        @keyframes shine{
+
+            0%{
+                left:-70%;
+            }
+
+            100%{
+                left:150%;
+            }
+        }
+
+        h1{
+
+            text-align:center;
+            color:white;
+            margin-bottom:25px;
+            font-size:40px;
+        }
+
+        h2{
+
+            margin-bottom:20px;
+            text-align:center;
+        }
+
+        label{
+
+            display:block;
+            margin-bottom:8px;
+            font-size:17px;
+        }
+
+        input{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            border-radius:15px;
+
+            background:rgba(
+                255,
+                255,
+                255,
+                0.08
+            );
+
+            color:white;
+
+            font-size:16px;
+
+            outline:none;
+
+            margin-bottom:20px;
+        }
+
+        button{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            border-radius:15px;
+
+            font-size:18px;
+
+            cursor:pointer;
+        }
+
+        .continue-btn{
+
+            background:#2563eb;
+            color:white;
+        }
+
+        .otp-btn{
+
+            background:#2563eb;
+            color:white;
+            margin-bottom:15px;
+        }
+
+        .confirm-btn{
+
+            background:#2563eb;
+            color:white;
+        }
+
+        .service-btn{
+
+            background:#10b981;
+            color:white;
+        }
+
+    </style>
+
 </head>
-<body><h1>Create Account</h1><form action="/new_user_login" method="POST"><label>Email</label>
-<br>
 
-<input
-type="email"
-name="email"
-required>
+<body>
 
-<br><br>
+<div class="container">
 
-<label>Password</label>
-<br>
+    <h1>Create Account</h1>
 
-<input
-type="password"
-name="password"
-minlength="8"
-required>
+    <form action="/new_user_login" method="POST">
 
-<br><br>
+        <!-- BOX 1 -->
 
-<button type="submit">
-    Continue
-</button></form></body>
-</html>
+        <div class="glass-box">
+
+            <h2>Account Details</h2>
+
+            <label>Email</label>
+
+            <input
+            type="email"
+            name="email"
+            required>
+
+            <label>Password</label>
+
+            <input
+            type="password"
+            name="password"
+            minlength="8"
+            required>
+
+            <button
+            type="submit"
+            class="continue-btn">
+            Continue
+            </button>
+
+        </div>
+
+    </form>
+
+    <!-- BOX 2 -->
+
+    <div class="glass-box">
+
+        <h2>OTP Verification</h2>
+
+        <button
+        type="button"
+        class="otp-btn">
+        Send OTP
+        </button>
+
+        <br><br>
+
+        <input
+        type="text"
+        placeholder="Enter OTP">
+
+        <button
+        type="button"
+        class="confirm-btn">
+        Confirm OTP
+        </button>
+
+    </div>
+
+    <!-- BOX 3 -->
+
+    <div class="glass-box">
+
+        <h2>Need Help?</h2>
+
+        <a href="/customer_service">
+
+            <button
+            type="button"
+            class="service-btn">
+            Customer Service
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+    </html>
